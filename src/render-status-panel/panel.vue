@@ -126,8 +126,6 @@
 
     return config;
   });
-
-  console.log("statusData", statusData);
 </script>
 
 <style scoped>
