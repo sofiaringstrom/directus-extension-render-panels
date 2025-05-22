@@ -1,0 +1,56 @@
+{
+  "name": "directus-extension-render-panels",
+  "description": "Please enter a description for your extension",
+  "icon": "extension",
+  "version": "1.0.0",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-bundle"
+  ],
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "bundle",
+    "path": {
+      "app": "dist/app.js",
+      "api": "dist/api.js"
+    },
+    "entries": [
+      {
+        "type": "endpoint",
+        "name": "render-status-endpoint",
+        "source": "src/render-status-endpoint/index.js"
+      },
+      {
+        "type": "panel",
+        "name": "render-status-panel",
+        "source": "src/render-status-panel/index.js"
+      },
+      {
+        "type": "panel",
+        "name": "render-cpu-panel",
+        "source": "src/render-cpu-panel/index.js"
+      },
+      {
+        "type": "endpoint",
+        "name": "render-cpu-endpoint",
+        "source": "src/render-cpu-endpoint/index.js"
+      }
+    ],
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link",
+    "validate": "directus-extension validate",
+    "add": "directus-extension add"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "13.1.0",
+    "vue": "^3.5.14"
+  }
+}
