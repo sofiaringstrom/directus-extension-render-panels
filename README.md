@@ -50,11 +50,11 @@ TODO
 
 ### env vars
 
-`RENDER_API_TOKEN`: `rnd_XXXXXXXXXXXX`
+`DIRECTUS_RENDER_API_TOKEN`: `rnd_XXXXXXXXXXXX`
 
 https://render.com/docs/api#1-create-an-api-key
 
-`RENDER_SERVICE_ID`: `srv_XXXXXXXXXXXX`
+`DIRECTUS_RENDER_SERVICE_ID`: `srv_XXXXXXXXXXXX`
 
 ## Planned
 

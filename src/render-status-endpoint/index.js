@@ -16,10 +16,10 @@ export default {
         // }
 
         const response = await fetch(
-          `https://api.render.com/v1/services/${process.env.RENDER_SERVICE_ID}/deploys?limit=1`,
+          `https://api.render.com/v1/services/${process.env.DIRECTUS_RENDER_SERVICE_ID}/deploys?limit=1`,
           {
             headers: {
-              Authorization: `Bearer ${process.env.RENDER_API_TOKEN}`,
+              Authorization: `Bearer ${process.env.DIRECTUS_RENDER_API_TOKEN}`,
             },
           }
         );

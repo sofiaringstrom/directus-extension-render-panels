@@ -4,19 +4,19 @@ export default {
     router.get("/", async (req, res) => {
       try {
         const responseLimit = await fetch(
-          `https://api.render.com/v1/metrics/cpu-limit?resolutionSeconds=60&resource=${process.env.RENDER_SERVICE_ID}`,
+          `https://api.render.com/v1/metrics/cpu-limit?resolutionSeconds=60&resource=${process.env.DIRECTUS_RENDER_SERVICE_ID}`,
           {
             headers: {
-              Authorization: `Bearer ${process.env.RENDER_API_TOKEN}`,
+              Authorization: `Bearer ${process.env.DIRECTUS_RENDER_API_TOKEN}`,
             },
           }
         );
 
         const responseUsage = await fetch(
-          `https://api.render.com/v1/metrics/cpu?resolutionSeconds=60&resource=${process.env.RENDER_SERVICE_ID}`,
+          `https://api.render.com/v1/metrics/cpu?resolutionSeconds=60&resource=${process.env.DIRECTUS_RENDER_SERVICE_ID}`,
           {
             headers: {
-              Authorization: `Bearer ${process.env.RENDER_API_TOKEN}`,
+              Authorization: `Bearer ${process.env.DIRECTUS_RENDER_API_TOKEN}`,
             },
           }
         );
